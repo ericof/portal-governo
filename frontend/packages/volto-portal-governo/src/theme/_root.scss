@@ -8,7 +8,7 @@ a {
   text-decoration: solid;
 
   &:hover {
-    color: $link-color-hover;
+    color: var(--link-color-hover);
     text-decoration: solid;
   }
 }
