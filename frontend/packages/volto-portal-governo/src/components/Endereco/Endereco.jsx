@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Container } from '@plone/components';
 
 const Endereco = (props) => {
-  const { endereco, complemento, cidade, estado, cep } = props;
+  const { endereco, complemento, cidade, estado, cep } = props.content;
   return (
     <Container narrow className={'endereco-wrapper'}>
       {endereco && (
@@ -30,11 +30,13 @@ const Endereco = (props) => {
 };
 
 Endereco.propTypes = {
-  endereco: PropTypes.string,
-  complemento: PropTypes.string,
-  cidade: PropTypes.string,
-  estado: PropTypes.string,
-  cep: PropTypes.string,
+  content: PropTypes.shape({
+    endereco: PropTypes.string,
+    complemento: PropTypes.string,
+    cidade: PropTypes.string,
+    estado: PropTypes.string,
+    cep: PropTypes.string,
+  }).isRequired,
 };
 
 export default Endereco;
