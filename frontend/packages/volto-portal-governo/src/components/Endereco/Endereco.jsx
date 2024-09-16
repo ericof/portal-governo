@@ -17,8 +17,12 @@ const Endereco = (props) => {
         </Container>
       )}
       <Container>
-        <span className="cidade">{cidade}</span> -{' '}
-        <span className="estado">{estado}</span>
+        <span className="cidade">{cidade}</span>
+        {estado && (
+          <>
+            - <span className="estado">{estado.token}</span>
+          </>
+        )}
       </Container>
       {cep && (
         <Container>

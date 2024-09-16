@@ -58,8 +58,9 @@ class ISecretaria(model.Schema):
         required=False,
         default="",
     )
-    estado = schema.TextLine(
+    estado = schema.Choice(
         title=_("Estado"),
+        vocabulary="portal.governo.vocabulary.estados",
         required=False,
     )
     cep = schema.TextLine(
