@@ -11,8 +11,10 @@ const Footer = () => {
   return (
     <footer id="footer">
       <Container className="footer">
-        <Info />
-        <Container className="dados">Olá Mundo</Container>
+        <Container className="footer-wrapper">
+          <Info />
+          <Container className="dados">Olá Mundo</Container>
+        </Container>
       </Container>
     </footer>
   );
